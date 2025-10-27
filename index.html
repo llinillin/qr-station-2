@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аудиозапись | Станция 2</title>
+    
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=104873750', 'ym');
+
+        ym(104873750, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/104873750" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #DE3A34 0%, #B32B2B 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(222, 58, 52, 0.2);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            border: 2px solid rgba(222, 58, 52, 0.1);
+        }
+        
+        .station-badge {
+            background: #DE3A34;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+        
+        .icon {
+            width: 90px;
+            height: 90px;
+            background: rgba(222, 58, 52, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            border: 2px solid rgba(222, 58, 52, 0.2);
+        }
+        
+        .icon svg {
+            width: 45px;
+            height: 45px;
+            color: #DE3A34;
+        }
+        
+        h1 {
+            color: #333;
+            font-size: 26px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            color: #DE3A34;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #DE3A34;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        
+        .countdown {
+            font-size: 15px;
+            color: #DE3A34;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .manual-link {
+            margin-top: 25px;
+            padding: 12px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            font-size: 14px;
+            border: 1px solid rgba(222, 58, 52, 0.1);
+        }
+        
+        .manual-link a {
+            color: #DE3A34;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .manual-link a:hover {
+            color: #B32B2B;
+            text-decoration: underline;
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+                margin: 10px;
+            }
+            
+            h1 {
+                font-size: 22px;
+            }
+            
+            .icon {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .icon svg {
+                width: 35px;
+                height: 35px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container pulse">
+        <div class="station-badge">СТАНЦИЯ 2</div>
+        
+        <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L13.09 8.26L20 9.27L15 13.14L16.18 20L12 16.77L7.82 20L9 13.14L4 9.27L10.91 8.26L12 2Z"/>
+            </svg>
+        </div>
+        
+        <h1>Продолжаем путешествие!</h1>
+        <div class="subtitle">Следующая аудиостанция</div>
+        <p>Вы находитесь на второй точке маршрута. Через несколько секунд начнется воспроизведение следующей аудиозаписи.</p>
+        
+        <div class="loader"></div>
+        <div class="countdown" id="countdown">Перенаправление через: 3 сек</div>
+        
+        <div class="manual-link">
+            Если перенаправление не сработало, 
+            <a href="https://disk.yandex.ru/d/bKhHVniOSeKgPA" id="manualLink">нажмите сюда</a>
+        </div>
+    </div>
+
+    <script>
+        // Ссылка на Яндекс.Диск для станции 2
+        const targetUrl = 'https://disk.yandex.ru/d/bKhHVniOSeKgPA';
+        
+        let seconds = 3;
+        const countdownElement = document.getElementById('countdown');
+        const manualLink = document.getElementById('manualLink');
+        
+        // Обновляем обратный отсчет
+        const countdownInterval = setInterval(function() {
+            seconds--;
+            countdownElement.textContent = 'Перенаправление через: ' + seconds + ' сек';
+            
+            if (seconds <= 0) {
+                clearInterval(countdownInterval);
+                countdownElement.textContent = 'Перенаправляем...';
+            }
+        }, 1000);
+        
+        // Регистрируем цель в Яндекс.Метрике для станции 2
+        ym(104873750, 'reachGoal', 'station2_qr_audio_play');
+        
+        // Перенаправление через 3 секунды
+        setTimeout(function() {
+            window.location.href = targetUrl;
+        }, 3000);
+        
+        // Также отслеживаем ручной переход по ссылке
+        manualLink.addEventListener('click', function() {
+            ym(104873750, 'reachGoal', 'station2_qr_manual_click');
+        });
+    </script>
+</body>
+</html>
